@@ -6,7 +6,7 @@
 #    By: flaviobiondo <flaviobiondo@student.42.f    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/20 11:21:42 by fbiondo           #+#    #+#              #
-#    Updated: 2023/10/18 17:36:54 by flaviobiond      ###   ########.fr        #
+#    Updated: 2023/10/20 15:06:06 by flaviobiond      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ RM		= rm -f
 CFLAGS = -Wall -Wextra -Werror
 
 .c.o:
-		${CC} ${CFLAGS} -g -c $< -o ${<:.c=.o}
+		${CC} ${CFLAGS} $< -o ${<:.c=.o}
 
 $(NAME): ${OBJS}
 		ar rcs ${NAME} ${OBJS}
